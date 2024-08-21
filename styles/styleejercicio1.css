@@ -1,0 +1,85 @@
+:root{
+    --color-principal: #003fd0;
+}
+body{
+    background-image: url(https://wwwimage-intl.pplusstatic.com/thumbnails/photos/w1920-q80/cbs_page_attribute/upsell_latam_hero1_weblandscape_2560x1280_051324.jpg);
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;}
+a {
+    color: white;
+    text-decoration: none;
+}
+.boton{
+    border: 1px solid white;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: large;
+    background-color: #303134;
+    text-align: center;
+    width: 400px ;
+    &.importante{
+        background-color: #003fd0 ;
+        border: unset;
+    }
+}
+header{
+    margin: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    >* {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+       }
+       p, span
+       {
+        font-weight: lighter;
+        span
+        {
+            font-weight: bold;
+        }
+    .boton{
+        width: 300px;
+    }
+ }
+
+p {
+    margin: 0;
+    font-size: larger;
+}
+} 
+
+main {
+    margin: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+h1, h2, h3 p, body{
+    margin: 0;}
+.cursiva {
+    font-style: italic;
+}
+/* responsive design; se pueden usar varios redpoints , uno para la tableta y otro para el movil */
+@media (width < 700px) {
+    main {
+        width: unset;
+    }
+    .only-desktop {
+        display: none;
+    }
+
+/* dark mode */
+    @media (prefers-color-scheme: dark){
+    :root{
+        --color-principal: reg(0,0,141);
+    }
+}
+}
+ 

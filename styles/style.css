@@ -1,0 +1,32 @@
+a{
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: none;
+    a span{
+        color: yellow;
+    }
+}
+
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.boton-ancho {
+    background-color: #303134;
+    border-radius: 5px;
+    color: #e8eaed;
+    padding: 10px;
+}
+
+.boton-ancho:hover{
+    border: black 1px solid;
+}
+#foto-perfil{
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 100px;
+    aspect-ratio: 1;
+}
+
