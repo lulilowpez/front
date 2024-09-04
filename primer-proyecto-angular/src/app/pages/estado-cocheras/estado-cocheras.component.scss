@@ -1,0 +1,10 @@
+h1 {
+    color: red;
+}
+table {
+    margin: auto;
+    thead, tr {	
+        display: grid;
+        grid-template-columns: 50px 2fr 1fr 1fr;   
+}
+}

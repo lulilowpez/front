@@ -1,0 +1,21 @@
+<a [routerLink]="['/login']">Cerrar sesión</a>
+<h1>{{ titulo }}</h1>
+<table>
+    <thead>
+        <td>{{headerTabla.t1}}</td>
+        <td>{{headerTabla.t2}}</td>
+        <td>{{ headerTabla.t3 }}</td>
+        <td>{{ headerTabla.t4 }}</td>
+    </thead>
+    <tbody>
+        @for (cochera of cocheras; track $index) {
+            <tr>
+                <td>{{cochera.numero}}</td>
+                <td>{{cochera.disponibilidad}}</td>
+                <td>{{cochera.ingreso}}</td>
+                <td>{{cochera.acciones}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button (click)="actualizarCocheras()">Borrar todo</button>
