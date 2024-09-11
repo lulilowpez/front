@@ -11,11 +11,23 @@
         @for (cochera of cocheras; track $index) {
             <tr>
                 <td>{{cochera.numero}}</td>
-                <td>{{cochera.disponibilidad}}</td>
+                <td>
+                    <span>[ngClass]="{'disponible': cochera.disponible,'ocupado': cochera.ocupado"}</span>
+                </td>
                 <td>{{cochera.ingreso}}</td>
-                <td>{{cochera.acciones}}</td>
+                <td class="acciones-container">
+                    @if(cochera.disponible){
+                        <button (click)="deshabilitarCochera($index)"><img/icons/trash-solid.svg></button>
+                    } @else {
+                        <button (click)="habilitarCochera($index)"><img src="img/icons/check-solid.svg"></button>
+                    }
+                    <button (click)="borrarFila($index)"><img src="img/icons/coins-solid.svg"></button>
+                </td>
             </tr>
         }
     </tbody>
 </table>
-<button (click)="actualizarCocheras()">Borrar todo</button>
+@if(esAdmin){
+    <button (click)="agregarCochera()" class="boton-resaltado" id="agregar-cochera">+</button>
+}
+</main>
