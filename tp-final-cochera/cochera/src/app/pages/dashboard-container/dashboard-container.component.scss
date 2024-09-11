@@ -1,0 +1,5 @@
+@use '../../colors.scss';	//color personalizado ver mas tarde
+.link-activo{
+    color: colors.$color-primario;
+    font-weight: bold;
+}

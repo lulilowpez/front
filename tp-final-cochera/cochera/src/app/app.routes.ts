@@ -1,3 +1,27 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { EstadoCocherasComponent } from './pages/estado-cocheras.component';
+import { DashboardContainerComponent } from './pages/dashboard-container/dashboard-container.component';
+import { ReportesComponent } from './pages/reportes/reportes.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {
+        path: '',
+        component: DashboardContainerComponent,
+        children: [
+            {
+                path: 'estado-cocheras',
+                component: EstadoCocherasComponent
+            },
+            {
+                path: 'reportes',
+                component: ReportesComponent,
+            }
+        ]
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    }
+
+];
